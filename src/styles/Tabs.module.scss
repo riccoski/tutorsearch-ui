@@ -1,0 +1,81 @@
+@import 'src/shared';
+
+.tabs {
+  $base-border-color: #dcdcdc !default;
+  $base-background-color: #fff !default;
+  $base-spacing: 1.5em !default;
+  $dark-gray: #333 !default;
+  $medium-screen: 40em !default;
+  $tab-link-color: $dark-gray;
+  $tab-border: 1px solid $base-border-color;
+  $tab-active-background: $base-background-color;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: #c0c0c0;
+  padding: 0;
+  margin-bottom: $base-spacing;
+
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  .item {
+    list-style: none;
+
+    @include breakpoint(medium) {
+      display: inline;
+    }
+  }
+
+  .link {
+    background-color: transparent;
+    border: 0;
+    color: $tab-link-color;
+    display: block;
+    @include font-size(normal, large);
+    margin-right: $small-spacing;
+    padding: ($base-spacing / 2) $small-spacing;
+    text-decoration: none;
+
+    @include breakpoint(medium) {
+      border-top: 0;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $action-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.isActive {
+      color: $action-color;
+      font-weight: bold;
+      border-bottom: 0;
+
+      @include breakpoint(medium) {
+        // border: $tab-border;
+        border-bottom: 3px solid $action-color;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+    padding-top: $base-spacing;
+    width: 100%;
+
+    &.isOpen {
+      display: block;
+    }
+
+    @include breakpoint(medium) {
+      border-top: 1px solid $base-border-color;
+      float: left;
+    }
+  }
+}

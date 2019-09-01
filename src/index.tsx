@@ -1,23 +1,11 @@
-/**
- * @class ExampleComponent
- */
-
-import * as React from 'react'
-
-import styles from './styles.css'
-
-export type Props = { text: string }
-
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { default as ThemeContext } from "./ThemeContext";
+export { default as Button } from "./Button";
+export { default as Card } from "./Card";
+export { default as Confirm } from "./Confirm";
+export { default as Dropdown } from "./Dropdown";
+export { default as Flash } from "./Flash";
+export { default as Loader } from "./Loader";
+export { default as Modal } from "./Modal";
+export { default as Pagination } from "./Pagination";
+export { default as Table } from "./Table";
+export { default as Tabs } from "./Tabs";

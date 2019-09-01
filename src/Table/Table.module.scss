@@ -1,0 +1,30 @@
+@import 'src/shared';
+
+.table {
+  overflow: hidden;
+  width: 100%;
+
+  th {
+    background: $color-background-shade;
+    border-bottom: $base-border;
+    padding: $base-spacing/2 $base-spacing;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  td {
+    padding: $base-spacing $base-spacing;
+  }
+
+  tr {
+    border-bottom: 1px dotted $base-border-color;
+  }
+
+  tfoot {
+    padding: $base-spacing;
+    td,
+    th {
+      border-top: $base-border;
+    }
+  }
+}

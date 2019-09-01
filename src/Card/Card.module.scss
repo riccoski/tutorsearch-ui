@@ -1,0 +1,56 @@
+@import 'src/shared';
+$background-color: #fdfdfd;
+
+.card {
+  background-color: $background-color;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  margin-bottom: $base-spacing;
+  overflow: hidden;
+
+  &.shadow {
+    box-shadow: $base-box-shadow;
+  }
+}
+
+.header {
+  background: $color-background-shade;
+  border-bottom: $base-border;
+  padding: $small-spacing $base-spacing/1.5;
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.body {
+  padding: $base-spacing/1.5;
+}
+
+.text {
+  line-height: 1.5;
+}
+
+.title {
+  @include font-size(large, x-large);
+  font-weight: $font-weight-bold;
+  margin-bottom: 0;
+
+  &.normal {
+    @include font-size(small, normal);
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.meta {
+  color: rgba($base-font-color, 0.5);
+  @include font-size(small); // background-color: #f1f1f1;
+  // padding: $small-spacing 0;
+}
