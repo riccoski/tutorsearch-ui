@@ -1,0 +1,113 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+$breakpoint-mobile: 320px;
+$breakpoint-phablet: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1280px;
+$breakpoint-desktop-large: 1640px;
+$breakpoints: (
+  small: 480px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px
+);
+$gutter: 30;
+
+// Typography
+$base-font-family: 'lato', sans-serif;
+$heading-font-family: $base-font-family;
+$secondary-font-family: $base-font-family;
+$icon-font-family: 'FontAwesome';
+
+// Font Sizes
+$base-font-size: 16px;
+
+//-- FONT WEIGHT
+$font-weight-light: 100;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 900;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: rgba(0, 114, 188, 1);
+$color-green: #558e4a;
+$color-dark-blue: #2c3356; // #424856; // #354463;
+$color-red: #d16157;
+$darker-gray: #596273;
+$dark-gray: #596273;
+$medium-gray: #999;
+$light-gray: #ddd;
+$color-black: #353535;
+$color-grey: #e4eaef;
+$color-white: #fff;
+$color-off-white: #f1f1f1; // #F2F0EF;
+$color-background-shade: #fafafa;
+
+// Font Colors
+$base-font-color: #4a4a4a;
+$header-font-color: rgba($dark-gray, 0.76); // Dark Grey
+$action-color: $blue;
+$main-color: $color-dark-blue;
+$color-accent: $color-green;
+$color-error: $color-red;
+$color-muted: $color-grey;
+
+// Border
+$base-border-color: rgba(#e4e3e3, 0.7); // $color-muted; //$light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fefefe; //lighten(#f6f8fa, 1.5);
+$secondary-background-color: $color-off-white; // Off WHite
+$tertiary-background-color: $color-black;
+
+// Forms
+$form-box-shadow: inset 1px 1px 2px rgba(27, 31, 35, 0.05); // inset 0 1px 2px rgba(27,31,35,0.075);
+$base-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+$form-box-shadow-focus: $form-box-shadow,
+  0 0 5px adjust-color($color-black, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease-in;
+$base-transition: $base-duration $base-timing;
+$mobile-grid: (
+  columns: 12,
+  margins: $small-spacing
+);
+$tablet-grid: (
+  columns: 6,
+  margins: $small-spacing
+);
+$base-grid: (
+  columns: 12,
+  margins: 20px
+);
+$font-sizes: (
+  x-small: 12px,
+  small: 14px,
+  normal: $base-font-size,
+  large: 18px,
+  x-large: 20px,
+  xx-large: 24px,
+  xxx-large: 30px,
+  xxxx-large: 34px
+);
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semi: 500;
+$font-weight-bold: 600;

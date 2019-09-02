@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Button, Modal } from "..";
+import Button from "../Button";
+import Modal from "../Modal";
 
 const Confirm: React.FC<{
   className?: string;

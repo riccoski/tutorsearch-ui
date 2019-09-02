@@ -3,13 +3,13 @@ import classNames from "classnames";
 import * as styles from "./Button.module.scss";
 
 export type ButtonProps = {
-  as<Props>?: React.ReactType<Props>;
+  as?: React.ComponentType;
   className?: string;
   color?: ButtonColor;
   hidden?: boolean;
   href?: string;
   link?: string;
-  onClick?: React.EventHandler<React.SyntheticEvent>;
+  onClick?: any;
   size?: ButtonSize;
   style?: React.CSSProperties;
   type?: string;
@@ -34,7 +34,7 @@ enum ButtonVariant {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  as: Component,
+  as,
   children,
   hidden,
   href,
@@ -48,6 +48,7 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   if (hidden) return null;
+  const Component = as || "button";
   const props = {
     className: classNames(
       styles.button,
@@ -71,7 +72,7 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 Button.defaultProps = {
-  as: "button",
+  // as: "button",
   type: "Button",
   variant: ButtonVariant.solid
 };

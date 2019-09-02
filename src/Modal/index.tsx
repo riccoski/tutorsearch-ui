@@ -13,7 +13,7 @@ const Modal: React.FC<{
   onClose: Function;
   open: boolean;
   trigger?: React.ReactChild;
-}> = ({ children, className, onClose, open, trigger }) => {
+}> = ({ children, className, onClose, open }) => {
   const [element] = React.useState(document.createElement("div"));
   const { open: showModal, handleOpen, handleClose } = useToggleState(open);
 
@@ -48,7 +48,6 @@ const Modal: React.FC<{
 
   return (
     <>
-      {trigger && trigger(handleOpen)}
       {showModal &&
         createPortal(
           <CSSTransition timeout={500} classNames="animated fadeIn">

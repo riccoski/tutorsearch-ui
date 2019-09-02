@@ -1,19 +1,19 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import * as React from "react";
 
 export function useToggleState(initialState = false) {
-  const [open, setOpen] = useState(initialState);
+  const [open, setOpen] = React.useState(initialState);
 
-  function handleClose(e?: React.SyntheticEvent): void {
+  function handleClose(e?: React.FormEvent<HTMLElement>): void {
     if (e) e.preventDefault();
     setOpen(false);
   }
 
-  function handleOpen(e?: React.SyntheticEvent): void {
+  function handleOpen(e?: React.FormEvent<HTMLElement>): void {
     if (e) e.preventDefault();
     setOpen(true);
   }
 
-  function handleToggle(e?: React.SyntheticEvent): void {
+  function handleToggle(e?: React.FormEvent<HTMLElement>): void {
     if (e) e.preventDefault();
     setOpen(!open);
   }
@@ -22,16 +22,16 @@ export function useToggleState(initialState = false) {
 }
 
 export function useClickOutside(callback: any) {
-  const ref = useRef<HTMLDivElement | null>(null);
+  const ref = React.useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = useCallback(
+  const handleClickOutside = React.useCallback(
     e => {
       if (!ref.current!.contains(e.target)) callback();
     },
     [callback]
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
 
     return function dispose() {
@@ -39,5 +39,5 @@ export function useClickOutside(callback: any) {
     };
   }, [handleClickOutside]);
 
-  return [ref, handleClickOutside];
+  return ref;
 }

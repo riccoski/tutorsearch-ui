@@ -9,11 +9,9 @@ type TabItem = {
   render?: React.ElementType;
 };
 
-interface TabProps {
+const Tabs: React.FC<{
   items: Array<TabItem>;
-}
-
-function Tabs({ items }: TabProps) {
+}> = ({ items }) => {
   const { tabs: styles } = React.useContext(ThemeContext);
   const [activeIndex, setActiveIndex] = React.useState<number>(0);
   return (
@@ -39,7 +37,7 @@ function Tabs({ items }: TabProps) {
       ))}
     </ul>
   );
-}
+};
 
 Tabs.displayName = "Tabs";
 Tabs.defaultProps = {

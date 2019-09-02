@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
-import { ThemeContext } from "..";
-import * as defaultStyles from "./Card.module.scss";
+// import { ThemeContext } from "..";
+import * as styles from "./Card.module.scss";
 
 type CardBodyProps = {
   className?: string;
@@ -11,7 +11,7 @@ const CardBody: React.FC<CardBodyProps> = React.forwardRef<
   HTMLDivElement,
   CardBodyProps
 >(({ children, className }, ref) => {
-  const { card: styles = defaultStyles } = React.useContext(ThemeContext);
+  // const { card: styles = defaultStyles } = React.useContext(ThemeContext);
   // const styles = themeStyles || defaultStyles;
 
   return (

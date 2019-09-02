@@ -4,6 +4,7 @@ export { default as Card } from "./Card";
 export { default as Confirm } from "./Confirm";
 export { default as Dropdown } from "./Dropdown";
 export { default as Flash } from "./Flash";
+export { default as Form } from "./Form";
 export { default as Loader } from "./Loader";
 export { default as Modal } from "./Modal";
 export { default as Pagination } from "./Pagination";
