@@ -49,8 +49,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   style
 }) => {
   const [selected, setSelected] = React.useState();
-  const [open, handleOpen, handleClose] = useToggleState();
-  const [ref] = useClickOutside<HTMLDivElement>(handleClose);
+  const { open, handleOpen, handleClose } = useToggleState();
+  const [ref] = useClickOutside(handleClose);
   const activeOption = options.find(opt => opt.value === selected);
 
   React.useEffect(() => {

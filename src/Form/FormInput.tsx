@@ -56,3 +56,5 @@ const FormInput: React.FC<{
 FormInput.defaultProps = {
   type: "text"
 };
+
+export default FormInput;

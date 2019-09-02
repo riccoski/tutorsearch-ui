@@ -2,8 +2,13 @@ import * as React from "react";
 import classNames from "classnames";
 import * as styles from "./Button.module.scss";
 
+type AnyTag =
+  | string
+  | React.FunctionComponent<never>
+  | (new (props: never) => React.Component);
+
 export type ButtonProps = {
-  as?: React.ReactComponentElement;
+  as?: AnyTag;
   className?: string;
   color?: ButtonColor;
   hidden?: boolean;

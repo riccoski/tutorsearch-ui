@@ -19,4 +19,6 @@ const Flash: React.FC<{
   return <div className={className}>{children}</div>;
 };
 
+Flash.displayName = "Flash";
+
 export default Flash;

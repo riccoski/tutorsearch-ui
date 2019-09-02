@@ -1,4 +1,3 @@
-// @ts-check
 import * as React from "react";
 import classNames from "classnames";
 import * as styles from "./Pagination.module.scss";
@@ -16,7 +15,7 @@ const Pagination: React.FC<{
     if (onPageChange) onPageChange(pageNumber);
   };
 
-  const pages = [...Array(totalPages).keys()].map(page => page + 1);
+  const pages = [new Array(totalPages).keys()].map((_, index) => index + 1);
 
   return (
     <div className={styles.pagination}>

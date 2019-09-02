@@ -2,7 +2,16 @@ import * as React from "react";
 import classNames from "classnames";
 import * as styles from "Form.module.scss";
 
-const Form: React.FC<{
+type TForm<T> = React.FC<T> & {
+  Actions?: React.FC;
+  Button?: React.FC;
+  Error?: React.FC;
+  Field?: React.FC;
+  Input?: React.FC;
+  TextArea?: React.FC;
+};
+
+const Form: TForm<{
   action?: string;
   className?: string;
   onSubmit?: React.FormEventHandler;

@@ -15,7 +15,7 @@ const Modal: React.FC<{
   trigger?: React.ReactChild;
 }> = ({ children, className, onClose, open, trigger }) => {
   const [element] = React.useState(document.createElement("div"));
-  const [showModal, handleOpen, handleClose] = useToggleState(open);
+  const { open: showModal, handleOpen, handleClose } = useToggleState(open);
 
   React.useEffect(() => {
     if (open) handleOpen();
@@ -30,8 +30,8 @@ const Modal: React.FC<{
     }
   }, [element]);
 
-  function handleOverlayClick(e) {
-    if (e.target.className === styles.overlay) handleClose();
+  function handleOverlayClick(e: React.FormEvent<HTMLElement>) {
+    if (e.currentTarget.className === styles.overlay) handleClose();
   }
 
   React.useEffect(() => {
