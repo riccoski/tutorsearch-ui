@@ -1,28 +1,30 @@
 import * as React from "react";
 import classNames from "classnames";
-import styles from "./Card.module.scss";
+import * as styles from "./Card.module.scss";
+import Card from "./Card";
 
-const CardBody: React.FC = ({ children, className }) => (
-  <div className={classNames(styles.body, className)}>{children}</div>
-);
+const CardBody: React.FC<{ className?: string }> = ({
+  children,
+  className
+}) => <div className={classNames(styles.body, className)}>{children}</div>;
 
-const CardImage = ({ alt, src }) => (
+const CardImage: React.FC<{ alt?: string; src: string }> = ({ alt, src }) => (
   <img src={src} alt={alt} className={styles.image} />
 );
 
-const CardHeader = ({ children }) => (
+const CardHeader: React.FC = ({ children }) => (
   <div className={styles.header}>{children}</div>
 );
 
-const CardMeta = ({ children }) => (
+const CardMeta: React.FC = ({ children }) => (
   <div className={styles.meta}>{children}</div>
 );
 
-const CardText = ({ children }) => (
+const CardText: React.FC = ({ children }) => (
   <div className={styles.text}>{children}</div>
 );
 
-const CardTitle = ({ children, size }) => (
+const CardTitle: React.FC<{ size?: string }> = ({ children, size }) => (
   <div
     className={classNames(styles.title, { [styles.normal]: size === "normal" })}
   >
@@ -30,23 +32,12 @@ const CardTitle = ({ children, size }) => (
   </div>
 );
 
-const CardFooter = ({ children, className }) => (
-  <div className={classNames(styles.footer, className)}>{children}</div>
-);
+const CardFooter: React.FC<{ className?: string }> = ({
+  children,
+  className
+}) => <div className={classNames(styles.footer, className)}>{children}</div>;
 
-const Card = React.forwardRef(
-  ({ body, children, className, shadow, ...props }, ref) => (
-    <div
-      className={classNames(styles.card, className, {
-        [styles.shadow]: shadow
-      })}
-      ref={ref}
-      {...props}
-    >
-      {body ? <CardBody>{children}</CardBody> : children}
-    </div>
-  )
-);
+Card.displayName = "Card";
 
 Card.Body = CardBody;
 Card.Footer = CardFooter;
