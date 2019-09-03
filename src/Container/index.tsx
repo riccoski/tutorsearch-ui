@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import styles from "./Layout.module.scss";
+import styles from "./Container.module.scss";
 
 const Container: React.FC<{ className?: string; flex?: boolean }> = ({
   children,
