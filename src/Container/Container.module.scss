@@ -1,0 +1,10 @@
+@import "src/shared";
+
+.container {
+  @include outer-container;
+
+  &.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

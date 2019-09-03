@@ -2,6 +2,7 @@ export { default as ThemeContext } from "./ThemeContext";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
 export { default as Confirm } from "./Confirm";
+export { default as Container } from "./Container";
 export { default as Dropdown } from "./Dropdown";
 export { default as Flash } from "./Flash";
 export { default as Form } from "./Form";
