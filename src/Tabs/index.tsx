@@ -1,7 +1,7 @@
 // @ts-check
 import * as React from "react";
 import classNames from "classnames";
-// import * as styles from "./Tabs.module.scss";
+// import styles from "./Tabs.module.scss";
 import ThemeContext from "../ThemeContext";
 
 type TabItem = {

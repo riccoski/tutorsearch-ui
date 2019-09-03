@@ -1,8 +1,8 @@
-@import 'src/shared.scss';
+@import "src/shared.scss";
 
 $buttonColor: #747474;
 
-.ui-button {
+.button {
   cursor: pointer;
   display: inline-block;
   min-height: 1em;

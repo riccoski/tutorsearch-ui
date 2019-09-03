@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import * as styles from "./Pagination.module.scss";
+import styles from "./Pagination.module.scss";
 
 const Pagination: React.FC<{
   currentPage: number;

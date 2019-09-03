@@ -1,5 +1,5 @@
 import * as React from "react";
-import * as styles from "./Form.module.scss";
+import styles from "./Form.module.scss";
 
 const FormError: React.FC = ({ children }) => {
   if (!children) return null;

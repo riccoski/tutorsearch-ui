@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import * as styles from "./Flash.module.scss";
+import styles from "./Flash.module.scss";
 
 const Flash: React.FC<{
   alert?: boolean;

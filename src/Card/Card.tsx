@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 // import { ThemeContext } from "..";
 import CardBody from "./CardBody";
-import * as styles from "./Card.module.scss";
+import styles from "./Card.module.scss";
 
 type TCard<T> = React.FC<T> & {
   Body?: React.FC;

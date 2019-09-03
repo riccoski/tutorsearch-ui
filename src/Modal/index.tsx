@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import classNames from "classnames";
 import { CSSTransition } from "react-transition-group";
 import { useToggleState } from "../hooks";
-import * as styles from "./Modal.module.scss";
+import styles from "./Modal.module.scss";
 
 const modalRoot = document.getElementById("modal-root");
 

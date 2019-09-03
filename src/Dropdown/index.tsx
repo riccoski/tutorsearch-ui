@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 import { useClickOutside, useToggleState } from "../hooks";
-import * as styles from "./Dropdown.module.scss";
+import styles from "./Dropdown.module.scss";
 
 type DropdownOption = {
   key: string;

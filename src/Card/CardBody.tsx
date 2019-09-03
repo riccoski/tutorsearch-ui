@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 // import { ThemeContext } from "..";
-import * as styles from "./Card.module.scss";
+import styles from "./Card.module.scss";
 
 type CardBodyProps = {
   className?: string;

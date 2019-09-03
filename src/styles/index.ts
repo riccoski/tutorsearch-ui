@@ -1,3 +1,1 @@
-import * as tabs from "./Tabs.module.scss";
-
-export { tabs };
+export { default as tabs } from "./Tabs.module.scss";

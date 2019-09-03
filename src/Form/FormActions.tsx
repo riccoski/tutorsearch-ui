@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import * as styles from "./Form.module.scss";
+import styles from "./Form.module.scss";
 
 const FormActions: React.FC<{ className?: string }> = ({
   children,

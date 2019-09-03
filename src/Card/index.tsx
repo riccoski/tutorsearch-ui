@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import * as styles from "./Card.module.scss";
+import styles from "./Card.module.scss";
 import Card from "./Card";
 
 const CardBody: React.FC<{ className?: string }> = ({

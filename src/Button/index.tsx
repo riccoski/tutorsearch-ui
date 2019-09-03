@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
-import * as styles from "./Button.module.scss";
+import styles from "./Button.module.scss";
 
 export type ButtonProps = {
   as?: React.ComponentType;
