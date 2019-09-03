@@ -15,7 +15,7 @@ const Pagination: React.FC<{
     if (onPageChange) onPageChange(pageNumber);
   };
 
-  const pages = [new Array(totalPages).keys()].map((_, index) => index + 1);
+  const pages = Array.from(Array(10).keys()).map((_, index) => index + 1);
 
   return (
     <div className={styles.pagination}>
