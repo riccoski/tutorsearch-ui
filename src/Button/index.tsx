@@ -53,9 +53,9 @@ const Button: React.FC<ButtonProps> = ({
     className: classNames(
       styles.button,
       className,
-      styles!.color,
-      styles!.size,
-      styles!.variant
+      [styles!.color],
+      [styles!.size],
+      [styles!.variant]
     ),
     onClick,
     style,

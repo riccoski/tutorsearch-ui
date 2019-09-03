@@ -58,12 +58,12 @@ $buttonColor: #747474;
     padding: 0;
   }
 
-  &.ui-button--large {
+  &.large {
     @include font-size(normal, large);
     padding: $base-spacing $base-spacing * 2;
   }
 
-  &.ui-button--small {
+  &.small {
     @include font-size(small);
     padding: $small-spacing;
   }
