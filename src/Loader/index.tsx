@@ -1,13 +1,17 @@
 import * as React from "react";
-// import { Loader } from 'semantic-ui-react';
-import "./Loader.scss";
+import classNames from "classnames";
+import styles from "./Loader.module.scss";
 
 const Loader: React.FC<{ active?: boolean }> = ({ active }) => (
-  <div className={"spinner" + (active ? " is-visible" : "")}>
-    <div className="spinner-inner">
-      <div className="bounce1" />
-      <div className="bounce2" />
-      <div className="bounce3" />
+  <div
+    className={classNames(styles.loader, {
+      [styles.active]: active
+    })}
+  >
+    <div className={styles.inner}>
+      <div className={styles.bounce1} />
+      <div className={styles.bounce2} />
+      <div className={styles.bounce3} />
     </div>
   </div>
 );
