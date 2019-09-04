@@ -35,6 +35,10 @@ $buttonColor: #747474;
     color: white;
   }
 
+  &.fluid {
+    width: 100%;
+  }
+
   &.primary {
     background: $action-color;
 

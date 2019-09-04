@@ -6,6 +6,7 @@ export type ButtonProps = {
   as?: React.ComponentType;
   className?: string;
   color?: ButtonColor;
+  fluid?: boolean;
   hidden?: boolean;
   href?: string;
   link?: string;
@@ -38,6 +39,7 @@ const Button: React.FC<ButtonProps> = ({
   as,
   children,
   color = ButtonColor.default,
+  fluid,
   hidden,
   href,
   className,
@@ -57,7 +59,10 @@ const Button: React.FC<ButtonProps> = ({
       className,
       styles[color],
       styles[size],
-      styles[variant]
+      styles[variant],
+      {
+        [styles.fluid]: fluid
+      }
     ),
     onClick,
     style,
