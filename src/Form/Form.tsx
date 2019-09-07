@@ -3,20 +3,20 @@ import classNames from "classnames";
 import styles from "./Form.module.scss";
 
 type TForm<T> = React.FC<T> & {
-  Actions?: React.FC;
-  Button?: React.FC;
-  Error?: React.FC;
-  Field?: React.FC;
-  Input?: React.FC;
-  TextArea?: React.FC;
+  Actions?: React.ElementType;
+  Button?: React.ElementType;
+  Error?: React.ElementType;
+  Field?: React.ElementType;
+  Input?: React.ElementType;
+  TextArea?: React.ElementType;
 };
 
 const Form: TForm<{
   action?: string;
   className?: string;
-  onSubmit?: React.FormEventHandler;
+  onSubmit?: (e?: React.FormEvent<Element>) => void;
 }> = ({ action, children, className, onSubmit, ...rest }) => {
-  function handleSubmit(e: React.SyntheticEvent) {
+  function handleSubmit(e: React.FormEvent<Element>) {
     if (typeof action !== "string") e.preventDefault();
     if (typeof onSubmit === "function") onSubmit(e);
   }
