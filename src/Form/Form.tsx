@@ -18,12 +18,16 @@ const Form: Form<{
   className?: string;
   onSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
 }> = ({ action, children, className, onSubmit, ...rest }) => {
-  function handleSubmit(e: React.FormEvent<HTMLFormElement) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     if (typeof action !== "string") e.preventDefault();
     if (typeof onSubmit === "function") onSubmit(e);
   }
   return (
-    <form className={classNames(styles.form, className)} onSubmit={} {...rest}>
+    <form
+      className={classNames(styles.form, className)}
+      onSubmit={handleSubmit}
+      {...rest}
+    >
       {children}
     </form>
   );
