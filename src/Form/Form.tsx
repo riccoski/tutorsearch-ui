@@ -6,10 +6,10 @@ import { FormInputProps } from "./FormInput";
 
 type TForm<T> = React.FC<T> & {
   Actions?: React.FC<FormActionsProps>;
-  Button?: React.FC<FormInputProps>;
+  Button?: React.FC;
   Error?: React.FC;
   Field?: React.FC;
-  Input?: React.FC;
+  Input?: React.FC<FormInputProps>;
   TextArea?: React.FC;
 };
 
