@@ -2,7 +2,11 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Form.module.scss";
 
-const FormActions: React.FC<{ className?: string }> = ({
+export interface FormActionsProps {
+  className?: string;
+}
+
+const FormActions: React.FC<FormActionsProps> = ({
   children,
   className,
   ...props

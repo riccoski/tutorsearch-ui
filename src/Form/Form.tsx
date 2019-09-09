@@ -1,14 +1,16 @@
 import * as React from "react";
 import classNames from "classnames";
 import styles from "./Form.module.scss";
+import { FormActionsProps } from "./FormActions";
+import { FormInputProps } from "./FormInput";
 
 type TForm<T> = React.FC<T> & {
-  Actions?: React.ElementType;
-  Button?: React.ElementType;
-  Error?: React.ElementType;
-  Field?: React.ElementType;
-  Input?: React.ElementType;
-  TextArea?: React.ElementType;
+  Actions?: React.FC<FormActionsProps>;
+  Button?: React.FC<FormInputProps>;
+  Error?: React.FC;
+  Field?: React.FC;
+  Input?: React.FC;
+  TextArea?: React.FC;
 };
 
 const Form: TForm<{

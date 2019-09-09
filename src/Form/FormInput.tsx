@@ -8,7 +8,7 @@ type FormInputChangeHandler = (
   props: { name: string; value: string }
 ) => void;
 
-const FormInput: React.FC<{
+export interface FormInputProps {
   className?: string;
   defaultValue?: string;
   error?: string;
@@ -18,7 +18,9 @@ const FormInput: React.FC<{
   placeholder?: string;
   type?: string;
   value?: string;
-}> = ({
+}
+
+const FormInput: React.FC<FormInputProps> = ({
   className,
   defaultValue,
   error,
