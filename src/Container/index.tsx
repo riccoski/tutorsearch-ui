@@ -2,7 +2,13 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Container.module.scss";
 
-const Container: React.FC<{ className?: string; flex?: boolean }> = ({
+interface Props {
+  className?: string;
+  flex?: boolean;
+  style?: React.CSSProperties;
+}
+
+const Container: React.FC<Props> = ({
   children,
   className,
   flex = false,
