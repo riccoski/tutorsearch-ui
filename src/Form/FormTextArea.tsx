@@ -3,11 +3,18 @@ import classNames from "classnames";
 import FormError from "./FormError";
 import styles from "./Form.module.scss";
 
-const FormTextArea: React.FC<{
+export interface FormTextAreaProps {
   className?: string;
   error?: string;
   label?: string;
-}> = ({ className, error, label, ...rest }) => {
+}
+
+const FormTextArea: React.FC<FormTextAreaProps> = ({
+  className,
+  error,
+  label,
+  ...rest
+}) => {
   return (
     <div className={classNames(className, styles.field, { error })}>
       <label>

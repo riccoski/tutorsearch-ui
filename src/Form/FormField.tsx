@@ -2,7 +2,11 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Form.module.scss";
 
-const FormField: React.FC<{ className?: string }> = ({
+export interface FormFieldProps {
+  className?: string;
+}
+
+const FormField: React.FC<FormFieldProps> = ({
   children,
   className,
   ...rest

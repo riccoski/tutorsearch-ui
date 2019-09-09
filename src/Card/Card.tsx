@@ -3,39 +3,61 @@ import classNames from "classnames";
 // import { ThemeContext } from "..";
 import CardBody from "./CardBody";
 import styles from "./Card.module.scss";
+import CardFooter, { CardFooterProps } from "./CardFooter";
+import CardHeader from "./CardHeader";
+import CardImage from "./CardImage";
+import CardMeta from "./CardMeta";
+import CardText from "./CardText";
+import CardTitle from "./CardTitle";
 
-type TCard<T> = React.FC<T> & {
-  Body?: React.FC;
-  Footer?: React.FC;
-  Header?: React.FC;
-  Image?: React.FC;
-  Meta?: React.FC;
-  Text?: React.FC;
-  Title?: React.FC;
-};
+interface CardComposition {
+  Body: React.FC;
+  Footer: React.FC<CardFooterProps>;
+  Header: React.FC;
+  Image: React.FC;
+  Meta: React.FC;
+  Text: React.FC;
+  Title: React.FC;
+}
 
-type CardProps = {
+interface CardProps {
   body?: React.ReactElement;
   className?: string;
   shadow?: boolean;
+}
+// interface card {
+//   <CardProps> & CardComposition
+// }
+
+const Card: React.FC<CardProps> & CardComposition = ({
+  body,
+  children,
+  className,
+  shadow,
+  ...props
+}) => {
+  // const { card: styles } = React.useContext(ThemeContext);
+
+  return (
+    <div
+      className={classNames(styles.card, className, {
+        [styles.shadow]: shadow
+      })}
+      {...props}
+    >
+      {body ? <CardBody>{children}</CardBody> : children}
+    </div>
+  );
 };
 
-const Card: TCard<CardProps> = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ body, children, className, shadow, ...props }, ref) => {
-    // const { card: styles } = React.useContext(ThemeContext);
+Card.displayName = "Card";
 
-    return (
-      <div
-        className={classNames(styles.card, className, {
-          [styles.shadow]: shadow
-        })}
-        ref={ref}
-        {...props}
-      >
-        {body ? <CardBody>{children}</CardBody> : children}
-      </div>
-    );
-  }
-);
+Card.Body = CardBody;
+Card.Footer = CardFooter;
+Card.Header = CardHeader;
+Card.Image = CardImage;
+Card.Meta = CardMeta;
+Card.Text = CardText;
+Card.Title = CardTitle;
 
 export default Card;

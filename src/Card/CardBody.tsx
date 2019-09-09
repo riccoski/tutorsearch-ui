@@ -3,9 +3,9 @@ import classNames from "classnames";
 // import { ThemeContext } from "..";
 import styles from "./Card.module.scss";
 
-type CardBodyProps = {
+export interface CardBodyProps {
   className?: string;
-};
+}
 
 const CardBody: React.FC<CardBodyProps> = React.forwardRef<
   HTMLDivElement,
