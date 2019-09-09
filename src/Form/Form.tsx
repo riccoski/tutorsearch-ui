@@ -1,8 +1,13 @@
 import * as React from "react";
 import classNames from "classnames";
+
+import FormActions, { FormActionsProps } from "./FormActions";
+import FormButton from "./FormButton";
+import FormError from "./FormError";
+import FormField from "./FormField";
+import FormInput, { FormInputProps } from "./FormInput";
+import FormTextArea from "./FormTextArea";
 import styles from "./Form.module.scss";
-import { FormActionsProps } from "./FormActions";
-import { FormInputProps } from "./FormInput";
 
 type Form<T> = React.FC<T> & {
   Actions?: React.FC<FormActionsProps>;
@@ -32,5 +37,14 @@ const Form: Form<{
     </form>
   );
 };
+
+Form.displayName = "Form";
+
+Form.Actions = FormActions;
+Form.Button = FormButton;
+Form.Error = FormError;
+Form.Field = FormField;
+Form.Input = FormInput;
+Form.TextArea = FormTextArea;
 
 export default Form;
