@@ -4,7 +4,7 @@ import styles from "./Form.module.scss";
 import { FormActionsProps } from "./FormActions";
 import { FormInputProps } from "./FormInput";
 
-type TForm<T> = React.FC<T> & {
+type Form<T> = React.FC<T> & {
   Actions?: React.FC<FormActionsProps>;
   Button?: React.FC;
   Error?: React.FC;
@@ -13,21 +13,17 @@ type TForm<T> = React.FC<T> & {
   TextArea?: React.FC;
 };
 
-const Form: TForm<{
+const Form: Form<{
   action?: string;
   className?: string;
-  onSubmit?: (e?: React.FormEvent<Element>) => void;
+  onSubmit?: (e?: React.FormEvent<HTMLFormElement>) => void;
 }> = ({ action, children, className, onSubmit, ...rest }) => {
-  function handleSubmit(e: React.FormEvent<Element>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement) {
     if (typeof action !== "string") e.preventDefault();
     if (typeof onSubmit === "function") onSubmit(e);
   }
   return (
-    <form
-      className={classNames(styles.form, className)}
-      onSubmit={handleSubmit}
-      {...rest}
-    >
+    <form className={classNames(styles.form, className)} onSubmit={} {...rest}>
       {children}
     </form>
   );

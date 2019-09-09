@@ -4,7 +4,7 @@ import FormError from "./FormError";
 import styles from "./Form.module.scss";
 
 type FormInputChangeHandler = (
-  event: React.FormEvent<HTMLInputElement>,
+  event: React.ChangeEvent<HTMLInputElement>,
   props: { name: string; value: string }
 ) => void;
 
@@ -31,7 +31,7 @@ const FormInput: React.FC<FormInputProps> = ({
   type,
   value
 }) => {
-  function handleChange(e: React.FormEvent<HTMLInputElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.currentTarget;
     if (onChange) {
       onChange(e, { name, value });
