@@ -17,38 +17,26 @@ export type ButtonProps = {
   variant?: ButtonVariant;
 };
 
-enum ButtonColor {
-  default = "default",
-  primary = "primary",
-  secondary = "secondary"
-}
+type ButtonColor = "default" | "primary" | "secondary";
 
-enum ButtonSize {
-  default = "",
-  large = "large",
-  small = "small"
-}
+type ButtonSize = "normal" | "large" | "small";
 
-enum ButtonVariant {
-  solid = "",
-  outlined = "outlined",
-  text = "text"
-}
+type ButtonVariant = "solid" | "outlined" | "text";
 
 const Button: React.FC<ButtonProps> = ({
   as,
   children,
-  color = ButtonColor.default,
+  color = "default",
   fluid,
   hidden,
   href,
   className,
   link,
   onClick,
-  size = ButtonSize.default,
+  size = "normal",
   style,
   type,
-  variant = ButtonVariant.solid,
+  variant = "solid",
   ...rest
 }) => {
   if (hidden) return null;
@@ -80,9 +68,9 @@ const Button: React.FC<ButtonProps> = ({
 
 Button.defaultProps = {
   // as: "button",
-  color: ButtonColor.default,
+  color: "default",
   type: "Button",
-  variant: ButtonVariant.solid
+  variant: "solid"
 };
 
 export default Button;
