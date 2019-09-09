@@ -1,16 +1,20 @@
 import * as React from "react";
 import classNames from "classnames";
+import FormActions, { FormActionsProps } from "./FormActions";
+import FormButton from "./FormButton";
+import FormError from "./FormError";
+import FormField from "./FormField";
+import FormInput, { FormInputProps } from "./FormInput";
+import FormTextArea from "./FormTextArea";
 import styles from "./Form.module.scss";
-import { FormActionsProps } from "./FormActions";
-import { FormInputProps } from "./FormInput";
 
 interface FormComposition {
-  Actions?: React.FC<FormActionsProps>;
-  Button?: React.FC;
-  Error?: React.FC;
-  Field?: React.FC;
-  Input?: React.FC<FormInputProps>;
-  TextArea?: React.FC;
+  Actions: React.FC<FormActionsProps>;
+  Button: React.FC;
+  Error: React.FC;
+  Field: React.FC;
+  Input: React.FC<FormInputProps>;
+  TextArea: React.FC;
 }
 
 interface Props {
@@ -40,5 +44,14 @@ const Form: React.FC<Props> & FormComposition = ({
     </form>
   );
 };
+
+Form.displayName = "Form";
+
+Form.Actions = FormActions;
+Form.Button = FormButton;
+Form.Error = FormError;
+Form.Field = FormField;
+Form.Input = FormInput;
+Form.TextArea = FormTextArea;
 
 export default Form;
