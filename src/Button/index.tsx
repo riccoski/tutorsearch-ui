@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./Button.module.scss";
 
 export type ButtonProps = {
-  as?: React.ComponentType;
+  as?: any;
   className?: string;
   color?: ButtonColor;
   fluid?: boolean;
@@ -15,6 +15,7 @@ export type ButtonProps = {
   style?: React.CSSProperties;
   type?: string;
   variant?: ButtonVariant;
+  [key: string]: any;
 };
 
 type ButtonColor = "default" | "primary" | "secondary";
