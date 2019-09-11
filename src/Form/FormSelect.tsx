@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./Form.module.scss";
 
-interface Props {
+export interface FormSelectProps {
   defaultValue?: string | string[] | undefined;
   label?: string;
   name?: string;
@@ -11,7 +11,7 @@ interface Props {
   ) => void;
 }
 
-const Select: React.FC<Props> = ({
+const FormSelect: React.FC<FormSelectProps> = ({
   children,
   defaultValue,
   name,
@@ -33,4 +33,4 @@ const Select: React.FC<Props> = ({
   );
 };
 
-export default Select;
+export default FormSelect;

@@ -8,6 +8,7 @@ import FormInput, { FormInputProps } from "./FormInput";
 import FormTextArea, { FormTextAreaProps } from "./FormTextArea";
 import styles from "./Form.module.scss";
 import { ButtonProps } from "../Button";
+import FormSelect, { FormSelectProps } from "./FormSelect";
 
 interface FormComposition {
   Actions: React.FC<FormActionsProps>;
@@ -15,6 +16,7 @@ interface FormComposition {
   Error: React.FC;
   Field: React.FC<FormFieldProps>;
   Input: React.FC<FormInputProps>;
+  Select: React.FC<FormSelectProps>;
   TextArea: React.FC<FormTextAreaProps>;
 }
 
@@ -53,6 +55,7 @@ Form.Button = FormButton;
 Form.Error = FormError;
 Form.Field = FormField;
 Form.Input = FormInput;
+Form.Select = FormSelect;
 Form.TextArea = FormTextArea;
 
 export default Form;
