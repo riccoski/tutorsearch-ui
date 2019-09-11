@@ -3,7 +3,7 @@ import classNames from "classnames";
 import styles from "./Form.module.scss";
 
 export interface FormActionsProps {
-  className?: string;
+  [key: string]: any;
 }
 
 const FormActions: React.FC<FormActionsProps> = ({

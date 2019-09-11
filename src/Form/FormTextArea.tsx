@@ -3,8 +3,11 @@ import classNames from "classnames";
 import FormError from "./FormError";
 import styles from "./Form.module.scss";
 
-export interface FormTextAreaProps {
-  className?: string;
+export interface FormTextAreaProps extends StrictFormTextAreaProps {
+  [key: string]: any;
+}
+
+interface StrictFormTextAreaProps {
   error?: string;
   label?: string;
 }
