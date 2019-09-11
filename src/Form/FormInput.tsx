@@ -8,11 +8,11 @@ type FormInputChangeHandler = (
   props: { name: string; value: string }
 ) => void;
 
-interface FormInputProps extends StrictFormInputProps {
+export interface FormInputProps extends StrictFormInputProps {
   [key: string]: any;
 }
 
-export interface StrictFormInputProps {
+interface StrictFormInputProps {
   className?: string;
   defaultValue?: string;
   error?: string;
