@@ -2,7 +2,11 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Card.module.scss";
 
-export interface CardFooterProps {
+export interface CardFooterProps extends StrictCardFooterProps {
+  [key: string]: any;
+}
+
+export interface StrictCardFooterProps {
   className?: string;
 }
 

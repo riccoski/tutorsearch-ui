@@ -3,7 +3,11 @@ import classNames from "classnames";
 // import { ThemeContext } from "..";
 import styles from "./Card.module.scss";
 
-export interface CardBodyProps {
+export interface CardBodyProps extends StrictCardBodyProps {
+  [key: string]: any;
+}
+
+export interface StrictCardBodyProps {
   className?: string;
 }
 
