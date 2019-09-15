@@ -20,14 +20,15 @@ interface CardComposition {
   Title: React.FC;
 }
 
-interface CardProps {
+interface StrictCardProps {
   body?: React.ReactElement;
   className?: string;
   shadow?: boolean;
 }
-// interface card {
-//   <CardProps> & CardComposition
-// }
+
+interface CardProps extends StrictCardProps {
+  [key: string]: any;
+}
 
 const Card: React.FC<CardProps> & CardComposition = ({
   body,
