@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Card.module.scss";
 
-interface CardMetaProps extends StrictCardMetaProps {
+export interface CardMetaProps extends StrictCardMetaProps {
   [key: string]: any;
 }
 

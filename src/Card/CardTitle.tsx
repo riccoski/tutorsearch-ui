@@ -2,7 +2,11 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Card.module.scss";
 
-export interface CardTitleProps {
+export interface CardTitleProps extends StrictCardTitleProps {
+  [key: string]: any;
+}
+
+interface StrictCardTitleProps {
   size?: string;
 }
 
