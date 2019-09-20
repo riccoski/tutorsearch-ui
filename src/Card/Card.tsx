@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 // import { ThemeContext } from "..";
-import CardBody from "./CardBody";
+import CardBody, { CardBodyProps } from "./CardBody";
 import styles from "./Card.module.scss";
 import CardFooter, { CardFooterProps } from "./CardFooter";
 import CardHeader from "./CardHeader";
@@ -15,7 +15,7 @@ interface DefaultProps {
 }
 
 interface CardComposition {
-  Body: React.FC<CardProps>;
+  Body: React.FC<CardBodyProps>;
   Footer: React.FC<CardFooterProps>;
   Header: React.FC<DefaultProps>;
   Image: React.FC<CardImageProps>;
