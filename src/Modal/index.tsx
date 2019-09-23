@@ -12,7 +12,7 @@ const Modal: React.FC<{
   className?: string;
   onClose: Function;
   open: boolean;
-  trigger?: React.ReactChild;
+  trigger?: React.ReactNode;
 }> = ({ children, className, onClose, open }) => {
   const [element] = React.useState(document.createElement("div"));
   const { open: showModal, handleOpen, handleClose } = useToggleState(open);
