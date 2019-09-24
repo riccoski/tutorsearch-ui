@@ -30,13 +30,9 @@ const Button: React.FC<ButtonProps> = ({
   color = "default",
   fluid,
   hidden,
-  href,
   className,
-  link,
   onClick,
   size = "normal",
-  style,
-  type,
   variant = "solid",
   ...rest
 }) => {
@@ -54,23 +50,16 @@ const Button: React.FC<ButtonProps> = ({
       }
     ),
     onClick,
-    style,
     ...rest
   };
 
-  if (href)
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
   return <Component {...props}>{children}</Component>;
 };
 
 Button.defaultProps = {
   // as: "button",
   color: "default",
-  type: "Button",
+  type: "button",
   variant: "solid"
 };
 
