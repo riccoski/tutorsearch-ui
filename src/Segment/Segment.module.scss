@@ -1,0 +1,32 @@
+@import "src/shared";
+
+.segment {
+  background: #fdfdfd;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
+  margin-bottom: $base-spacing;
+}
+
+.header {
+  border-bottom: $base-border;
+  // margin-bottom: $base-spacing;
+  padding: $small-spacing $base-spacing;
+  position: relative;
+
+  h2 {
+    @include font-size(normal, large);
+    margin: 0;
+  }
+}
+
+.content {
+  padding: $base-spacing;
+}
+
+.actions {
+  position: absolute;
+  top: 50%;
+  right: $small-spacing;
+  transform: translateY(-50%);
+}
