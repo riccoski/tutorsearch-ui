@@ -22,7 +22,7 @@ type ButtonColor = "default" | "primary" | "secondary";
 
 type ButtonSize = "normal" | "large" | "small";
 
-type ButtonVariant = "solid" | "outlined" | "text";
+type ButtonVariant = "solid" | "outline" | "text";
 
 const Button: React.FC<ButtonProps> = ({
   as,

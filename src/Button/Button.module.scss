@@ -1,13 +1,13 @@
 @import "src/shared.scss";
 
-$buttonColor: #747474;
+$buttonColor: #f1f1f1;
 
 .button {
   cursor: pointer;
   display: inline-block;
   min-height: 1em;
   outline: none;
-  border: none;
+  border: $base-border;
   vertical-align: baseline;
   background: $buttonColor;
   color: white;
@@ -41,6 +41,7 @@ $buttonColor: #747474;
 
   &.primary {
     background: $action-color;
+    border: 1px solid darken($action-color, 5);
 
     &:hover {
       background: darken($action-color, 10);
@@ -49,13 +50,14 @@ $buttonColor: #747474;
 
   &.secondary {
     background: $color-accent;
+    border: 1px solid darken($color-accent, 5);
 
     &:hover {
       background: darken($color-accent, 10);
     }
   }
 
-  &.transparent {
+  &.text {
     background-color: transparent;
     color: $action-color;
     font-weight: bold;
@@ -72,9 +74,9 @@ $buttonColor: #747474;
     padding: $small-spacing;
   }
 
-  &.basic {
+  &.outline {
     background-color: transparent;
-    border-radius: 20px;
+    // border-radius: 20px;
     border: 1px solid rgba($base-font-color, 0.8);
     color: rgba($base-font-color, 0.8);
     // margin-bottom: $small-spacing;
