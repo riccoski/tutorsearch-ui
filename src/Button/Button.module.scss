@@ -6,6 +6,7 @@ $button-border: 1px solid #ddd;
 .button {
   cursor: pointer;
   display: inline-block;
+  font-family: $base-font-family;
   min-height: 1em;
   outline: none;
   border: $button-border;
@@ -31,7 +32,7 @@ $button-border: 1px solid #ddd;
 
   &:hover {
     background: darken($buttonColor, 10);
-    color: white;
+    color: inherit;
   }
 
   &.fluid {
