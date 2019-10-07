@@ -3,7 +3,7 @@ import * as React from "react";
 import { createPortal } from "react-dom";
 import classNames from "classnames";
 import { CSSTransition } from "react-transition-group";
-import { useToggleState } from "../hooks";
+import { useToggleState, useClickOutside } from "../hooks";
 import styles from "./Modal.module.scss";
 
 const modalRoot = document.getElementById("modal-root");
@@ -16,7 +16,7 @@ const Modal: React.FC<{
 }> = ({ children, className, onClose, open }) => {
   const [element] = React.useState(document.createElement("div"));
   const { open: showModal, handleOpen, handleClose } = useToggleState(open);
-
+  const ref = useClickOutside(handleClose);
   React.useEffect(() => {
     if (open) handleOpen();
     else handleClose();
@@ -29,10 +29,6 @@ const Modal: React.FC<{
       modalRoot!.removeChild(element);
     }
   }, [element]);
-
-  function handleOverlayClick(e: React.FormEvent<HTMLElement>) {
-    if (e.currentTarget.className === styles.overlay) handleClose();
-  }
 
   React.useEffect(() => {
     if (showModal) {
@@ -56,8 +52,8 @@ const Modal: React.FC<{
                 [styles.isOpen]: showModal
               })}
             >
-              <div className={styles.overlay} onClick={handleOverlayClick}>
-                <div className={styles.container}>
+              <div className={styles.overlay}>
+                <div ref={ref} className={styles.container}>
                   <div className={styles.close} onClick={handleClose} />
                   {children}
                 </div>
