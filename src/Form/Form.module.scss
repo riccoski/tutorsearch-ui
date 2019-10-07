@@ -1,4 +1,4 @@
-@import 'src/shared';
+@import "src/shared";
 
 .form {
 }
@@ -16,21 +16,21 @@ fieldset {
 
 .field {
   &:global(.error) {
-    input[type='email'],
-    input[type='number'],
-    input[type='password'],
-    input[type='search'],
-    input[type='tel'],
-    input[type='text'],
-    input[type='url'],
-    input[type='color'],
-    input[type='date'],
-    input[type='datetime'],
-    input[type='datetime-local'],
-    input[type='month'],
-    input[type='time'],
-    input[type='week'],
-    select[multiple='multiple'],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="url"],
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    select[multiple="multiple"],
     textarea {
       border: 1px solid red;
     }
@@ -54,7 +54,7 @@ label {
   }
 
   &.required::after {
-    content: '*';
+    content: "*";
   }
 
   abbr {
@@ -62,21 +62,21 @@ label {
   }
 }
 
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
-input[type='color'],
-input[type='date'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='month'],
-input[type='time'],
-input[type='week'],
-select[multiple='multiple'],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+select[multiple="multiple"],
 textarea {
   // background-color: rgba(248, 248, 248, 0.3);
   background-color: #fdfdfd;
@@ -110,13 +110,13 @@ textarea {
 //   @include appearance(none);
 // }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   display: inline;
   margin-right: $small-spacing / 2;
 }
 
-input[type='file'] {
+input[type="file"] {
   padding-bottom: $small-spacing;
   width: 100%;
 }
@@ -129,8 +129,7 @@ input[type='file'] {
   position: relative;
 
   &::after {
-    content: '\f0dd';
-    font-family: $icon-font-family;
+    content: "\f0dd";
     line-height: 0.8;
     position: absolute;
     top: 50%;
