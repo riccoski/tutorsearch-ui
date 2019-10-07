@@ -13,7 +13,7 @@ $button-border: 1px solid #c4c3c3;
   border: $button-border;
   vertical-align: baseline;
   background: $buttonColor;
-  @include font-size(small, normal);
+  @include font-size(normal);
   margin: 0em 0.25em 0em 0em;
   padding: 0.6em 1em;
   text-transform: none;
@@ -69,7 +69,7 @@ $button-border: 1px solid #c4c3c3;
   }
 
   &.large {
-    @include font-size(normal, large);
+    @include font-size(large);
     padding: $base-spacing $base-spacing * 2;
   }
 
