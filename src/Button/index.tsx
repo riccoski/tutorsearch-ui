@@ -59,7 +59,6 @@ const Button: React.FC<ButtonProps> = ({
 Button.defaultProps = {
   // as: "button",
   color: "default",
-  type: "button",
   variant: "solid"
 };
 

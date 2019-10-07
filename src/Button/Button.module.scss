@@ -1,9 +1,10 @@
 @import "src/shared.scss";
 
 $buttonColor: #f1f1f1;
-$button-border: 1px solid #ddd;
+$button-border: 1px solid #c4c3c3;
 
 .button {
+  color: rgba($base-font-color, 0.8);
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -31,7 +32,7 @@ $button-border: 1px solid #ddd;
     box-shadow 0.1s ease, background 0.1s ease;
 
   &:hover {
-    background: darken($buttonColor, 10);
+    background: darken($buttonColor, 3);
     color: inherit;
   }
 
@@ -72,6 +73,7 @@ $button-border: 1px solid #ddd;
   }
 
   &.small {
+    border-radius: 3px;
     @include font-size(small);
     padding: $small-spacing;
   }
