@@ -85,10 +85,9 @@ $button-border: 1px solid #c4c3c3;
     text-decoration: none;
     transition: $base-transition;
 
-    // &:hover {
-    //   background-color: rgba($base-font-color, 0.9);
-    //   color: white;
-    // }
+    &:hover {
+      background: darken($buttonColor, 3);
+    }
 
     &.primary {
       border: 1px solid $action-color;
