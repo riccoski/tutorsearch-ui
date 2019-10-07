@@ -15,7 +15,7 @@ $button-border: 1px solid #c4c3c3;
   background: $buttonColor;
   @include font-size(small, normal);
   margin: 0em 0.25em 0em 0em;
-  padding: 1em;
+  padding: 0.6em 1em;
   text-transform: none;
   text-shadow: none;
   font-weight: bold;
@@ -75,23 +75,20 @@ $button-border: 1px solid #c4c3c3;
   &.small {
     border-radius: 3px;
     @include font-size(small);
-    padding: $small-spacing;
+    padding: $small-spacing $small-spacing * 1.2;
   }
 
   &.outline {
     background-color: transparent;
-    // border-radius: 20px;
     border: 1px solid rgba($base-font-color, 0.8);
     color: rgba($base-font-color, 0.8);
-    // margin-bottom: $small-spacing;
-    padding: 0.6em 1em;
     text-decoration: none;
     transition: $base-transition;
 
-    &:hover {
-      background-color: rgba($base-font-color, 0.9);
-      color: white;
-    }
+    // &:hover {
+    //   background-color: rgba($base-font-color, 0.9);
+    //   color: white;
+    // }
 
     &.primary {
       border: 1px solid $action-color;
