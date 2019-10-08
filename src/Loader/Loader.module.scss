@@ -7,6 +7,13 @@
   border-radius: 50%;
   @include size(32px);
   animation: spin 1s linear infinite;
+  display: none;
+  visibility: hidden;
+
+  &.active {
+    display: block;
+    visibility: visible;
+  }
 
   &.inverted {
     border-color: rgba(white, 0.87);
