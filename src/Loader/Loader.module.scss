@@ -2,12 +2,12 @@
 
 .loader {
   border-color: rgba(228, 227, 227, 0.7);
-  border-top-color: rgba(black, 0.87);
+  border-top-color: rgba(black, 0.67);
   border-style: solid;
   border-width: 3px;
   border-radius: 50%;
   @include size(32px);
-  animation: spin 1s linear infinite;
+  animation: spin 1.5s linear infinite;
   display: none;
   visibility: hidden;
 
