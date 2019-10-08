@@ -2,18 +2,24 @@ import * as React from "react";
 import classNames from "classnames";
 import styles from "./Loader.module.scss";
 
-const Loader: React.FC<{ active?: boolean }> = ({ active }) => (
+type Inline = "centered";
+type Size = "small" | "medium" | "large";
+
+const Loader: React.FC<{
+  active?: boolean;
+  className?: string;
+  inline?: Inline;
+  inverted?: boolean;
+  size?: Size;
+}> = ({ active, className, inline, inverted, size = "medium" }) => (
   <div
-    className={classNames(styles.loader, {
-      [styles.active]: active
+    className={classNames(styles.loader, styles[size], className, {
+      [styles.active]: active,
+      [styles.centered]: inline === "centered",
+      [styles.inverted]: inverted,
+      [styles.inline]: inline
     })}
-  >
-    <div className={styles.inner}>
-      <div className={styles.bounce1} />
-      <div className={styles.bounce2} />
-      <div className={styles.bounce3} />
-    </div>
-  </div>
+  />
 );
 
 Loader.displayName = "Loader";
