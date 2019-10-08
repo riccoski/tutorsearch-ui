@@ -24,20 +24,16 @@ export function useToggleState(initialState = false) {
 export function useClickOutside(callback: any) {
   const ref = React.useRef<HTMLDivElement | null>(null);
 
-  const handleClickOutside = React.useCallback(
-    e => {
-      if (!ref.current!.contains(e.target)) callback();
-    },
-    [callback]
-  );
-
   React.useEffect(() => {
+    function handleClickOutside(e) {
+      if (!ref.current!.contains(e.target)) callback();
+    }
     document.addEventListener("click", handleClickOutside, true);
 
     return function dispose() {
       document.removeEventListener("click", handleClickOutside, true);
     };
-  }, [handleClickOutside]);
+  }, []);
 
   return ref;
 }
