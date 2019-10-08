@@ -25,7 +25,7 @@ export function useClickOutside(callback: any) {
   const ref = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
-    function handleClickOutside(e) {
+    function handleClickOutside(e: any) {
       if (!ref.current!.contains(e.target)) callback();
     }
     document.addEventListener("click", handleClickOutside, true);
